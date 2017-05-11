@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.grandcircus.spring.models.CustomersEntity" table="Customers" schema="northwind">
+        <id name="customerId">
+            <column name="CustomerID" sql-type="varchar(5)" length="5"/>
+        </id>
+        <property name="companyName">
+            <column name="CompanyName" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="contactName">
+            <column name="ContactName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="contactTitle">
+            <column name="ContactTitle" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="address">
+            <column name="Address" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="city">
+            <column name="City" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="region">
+            <column name="Region" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="postalCode">
+            <column name="PostalCode" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="country">
+            <column name="Country" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="Phone" sql-type="varchar(24)" length="24" not-null="true"/>
+        </property>
+        <property name="fax">
+            <column name="Fax" sql-type="varchar(24)" length="24" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
